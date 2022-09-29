@@ -1,14 +1,19 @@
+import { useState } from "react";
+import GridComponent from "./components/GridComponent";
 import Header from "./components/Header";
-import { LandingPage } from "./components/LandingPage/LandingPage";
-import Search from "./components/Search/Search";
+import SearchComponent from "./components/SearchComponent";
 import Theme from "./theme/theme";
 function App() {
+  const [criterial, setCriterial] = useState('');
+  const handlerOnSubmit = ({search}) => {
+    //const {data, isLoading} = useFetch(search);
+    setCriterial(search);
+  }
   return (
     <Theme>
       <Header />
-      <LandingPage>
-        <Search />
-      </LandingPage>
+      <SearchComponent handlerOnSubmit={handlerOnSubmit}/>
+      <GridComponent criterial={criterial}/>
     </Theme>
   );
 }

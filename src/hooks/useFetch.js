@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useState } from "react"
+import { searchGiffs } from "../services"
 
-const {REACT_APP_URL_GIPHY, REACT_APP_URL_KEY} = process.env;
-const FetchData = (search) => {
-    const [result, setResult] = useState([])
+const useFetch = (criterial) => {
+    const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    fetch(`${REACT_APP_URL_GIPHY}search?api_key=${REACT_APP_URL_KEY}&q=${search}&limit=25&offset=0&rating=g&lang=en`).then(
-        (response) => response.json()
-    ).then(({data}) => {
+
+    const getData = async() => {
+        const response =  await searchGiffs(criterial);
+        setData(response);
         setIsLoading(false);
-        setResult(data);
-    });
-    return {result, isLoading};
+    };
+    getData();
+    return {data, isLoading};
 }
-export default FetchData;
+export default useFetch;

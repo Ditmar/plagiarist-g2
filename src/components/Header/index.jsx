@@ -1,8 +1,9 @@
 import React from 'react'
 import useStyles from './header.styles';
-
+import {searchGiffs} from '../../services';
 const Header = () => {
-    const classes = useStyles();
+  searchGiffs('better call saul');
+  const classes = useStyles();
   return (
     <>
         <div className={classes.header}>
