@@ -1,19 +1,26 @@
-import { useState } from "react";
-import GridComponent from "./components/GridComponent";
-import Header from "./components/Header";
-import SearchComponent from "./components/SearchComponent";
 import Theme from "./theme/theme";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import SearchGiffs from "./pages/SearchGiffs";
+import Login from "./pages/login";
+import Header from "./components/Header";
 function App() {
-  const [criterial, setCriterial] = useState('');
-  const handlerOnSubmit = ({search}) => {
-    //const {data, isLoading} = useFetch(search);
-    setCriterial(search);
-  }
+  
   return (
     <Theme>
-      <Header />
-      <SearchComponent handlerOnSubmit={handlerOnSubmit}/>
-      <GridComponent criterial={criterial}/>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<>
+              <Header />
+              <SearchGiffs />
+            </> } />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+      </BrowserRouter>
+
     </Theme>
   );
 }

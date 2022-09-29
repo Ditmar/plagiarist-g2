@@ -1,16 +1,15 @@
 import { useState } from "react"
 import { searchGiffs } from "../services"
 
-const useFetch = (criterial) => {
+const useFetch = (loading =  true) => {
     const [data, setData] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-
-    const getData = async() => {
+    const [isLoading, setIsLoading] = useState(loading);
+    const getData = async(criterial) => {
         const response =  await searchGiffs(criterial);
+        console.log(response);
         setData(response);
         setIsLoading(false);
     };
-    getData();
-    return {data, isLoading};
+    return {data, isLoading, getData, setIsLoading};
 }
 export default useFetch;
