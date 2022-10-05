@@ -1,10 +1,11 @@
 
-import ItemComponent from "./ItemComponent";
+import useStyles from './gridComponent.styles';
+import ItemComponent from './ItemComponent';
 
 const GridComponent = ({data, isLoading}) => {
-    
+    const classes = useStyles();
     return (
-        <div>
+        <div className={classes.wrap}>
             {isLoading? <div>loading...</div>: 
             data.map(item =>
                 <ItemComponent key={item.id}  id={item.id} title={item.title} uri={item.uri}/>
