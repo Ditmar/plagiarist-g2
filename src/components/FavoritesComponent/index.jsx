@@ -3,8 +3,8 @@ import { FavoritesContext } from "../../context/FavoritesContext";
 import GridComponent from "../GridComponent";
 
 const FavoritesComponent = () => {
-    const {favoritesObject} = useContext(FavoritesContext);
-    const {listFavorites} = favoritesObject;
+    const {state} = useContext(FavoritesContext);
+    const {listFavorites} = state;
     return <div>
         <GridComponent data={listFavorites} isLoading={false}/>
     </div>
