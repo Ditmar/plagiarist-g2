@@ -4,13 +4,23 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import SearchGiffs from './pages/SearchGiffs';
 import Login from './pages/login';
-import Header from './components/Header';
-import MenuComponent from './components/MenuComponent';
-import FavoritesContextProvider from './context/FavoritesContextProvider';
-import FavoritesComponent from './components/FavoritesComponent';
+import Dashboard from './components/DashboardComponent/Dashboard';
+import UploadComponent from './components/UploadComponent';
+import LoaderComponent from './components/LoaderComponent';
+import LoaderSpinnerContextProvider from './context/LoaderSpinnerContextProvider';
+import { io } from "socket.io-client";
+import { useEffect } from 'react';
+import socketIoEndpoint from './async/services/socketIO';
+const setUpSocketIO = () => {
+    //socket = io(uri);
+    // socket.on('serverresponse', (room) => {
+    //   console.log(room);
+    //   socket.emit('joinroom', room);
+    // })
+}
 function App() {
+
   const items = [
     {
       to: '/',
@@ -25,26 +35,28 @@ function App() {
       name: 'Login'
     }
   ];
+
   return (
     
       <Theme>
-        <FavoritesContextProvider>
+        <LoaderSpinnerContextProvider>
           <BrowserRouter>
+            <LoaderComponent />
             <Routes>
               <Route path="/" element={<>
-                <Header/>
-                <MenuComponent items={items}/>
-                <FavoritesComponent />
+                <Dashboard> 
+                  <p>content </p> 
+                </Dashboard>
               </>}/>
-              <Route path="/searchgiffs" element={<>
-                <Header />
-                <MenuComponent items={items}/>
-                <SearchGiffs />
+              <Route path="/upload" element={<>
+                <Dashboard> 
+                  <UploadComponent />
+                </Dashboard>
               </> } />
               <Route path="/login" element={<Login />} />
             </Routes>
           </BrowserRouter>
-        </FavoritesContextProvider>
+        </LoaderSpinnerContextProvider>
       </Theme>
   );
 }

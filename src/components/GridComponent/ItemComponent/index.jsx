@@ -32,4 +32,4 @@ const ItemComponent = ({id, title, uri}) => {
         </div>
     );
 }
-export default ItemComponent;
+export default ItemComponent
