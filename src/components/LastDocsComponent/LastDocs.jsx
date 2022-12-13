@@ -4,10 +4,8 @@ import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
-import Title from './Title';
+import Title from '../DashboardComponent/Title';
 import Typography from '@mui/material/Typography';
-
-// let api="http://3.23.86.147/api-doc/#/default/get_server_summary_report";
 
 function preventDefault(event) {
     event.preventDefault();
@@ -19,6 +17,7 @@ class LastDocs extends React.Component {
             items: [],
             checked: false
         };
+        
     }
     componentDidMount() {
         fetch('https://fakestoreapi.com/products?limit=5').then(res => res.json()).then(json => {
@@ -30,7 +29,7 @@ render() {
         <React.Fragment>
             <Title>Utlimos Documentos Publicados</Title>
             <Typography color="text.secondary"
-                sx={{display: 'inline' }}>Group
+                sx={{display: 'inline'}}>Group
                 <Typography color="primary"
                     sx={{display: 'inline', ml:1}}>
                     Support
@@ -75,4 +74,4 @@ render() {
     )
             }
 }
-export default Orders;
+export default LastDocs;

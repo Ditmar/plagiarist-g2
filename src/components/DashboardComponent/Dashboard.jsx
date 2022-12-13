@@ -15,6 +15,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
+import LastDocs from '../LastDocsComponent/LastDocs';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
 
 function Copyright(props) {
   return (
@@ -152,6 +155,13 @@ const  DashboardContent = ({children}) => {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             {children}
+            {/* LastDocs RojoRx */}
+            <Grid item xs={12} sx={{ boxShadow: 1 }}>
+              <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+                <LastDocs/>
+              </Paper>
+            </Grid>
+
           </Container>
         </Box>
       </Box>
