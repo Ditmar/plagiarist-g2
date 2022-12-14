@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
-
+import useStyles from './multi.style'
 const Avatar = ({urlImagen}) => {
-
+    const classes = useStyles();
     return(
         <Fragment>
-            <img src={urlImagen} alt="" className=" avatar"/>
+            <img src={urlImagen} alt="" className={classes.avatar}/>
         </Fragment>
     );
 }

@@ -1,86 +1,9 @@
-.padre {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-    align-items: center;
-  }
-  .hijo {
-    padding: 5px;
-    margin: 1px;
-  }
 
-
-    .titulo{
-    height: 34px;
-    left: 0px;
-    top: calc(50% - 34px/2 + 1px);
-    margin-right: 120px;
-
-
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
-    letter-spacing:1px;
-
-
-    color: #252733;
-    }
-
-  .containerInput{
-    width: 453px;
-    height: 26px;
-    left: 415px;
-    top: 13px;
-  }
-  .inputBuscar{
-    width: 413px;
-    height: 24px;
-    left: 415px;
-    top: 13px;
-    background:  #D9D9D9;
-    border: none;
-
-  }
-  button{
+button{
     height: 26px;
     width: 36px;
     color: #C5C7CD;
     border: none;
-  }
-.media{
-    display: flex;
-    align-items: center;
-}
-.hijo2{
-  margin-bottom: 10px;
-  margin-right: 5px;
-}
-
-  .usuario{
-    width: 200px;
-    height: 10px;
-    
-    /* SemiBold/14px */
-    
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 600px;
-    font-size: 14px;
-    line-height: 20px;
-    /* or 143% */
-    text-align: right;
-    letter-spacing: 0.2px;
-    }
-.avatar{
-width: 44px;
-height: 44px;
-right: 0px;
-top: calc(50% - 44px/2);
-border: 1.5px solid #DFE0EB;
-border-radius: 50%;
-margin-top: 10px;
 }
 .icon{
   position: relative;

@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react'
-
+import useStyles from './multi.style'
 
  const Title = (props) => {
+    const classes = useStyles();
      return(
         <Fragment>
-            <h4 className='titulo'>Overview {props.Pagina} </h4>
+            <h4 className={classes.titulo}>Overview {props.Pagina} </h4>
         </Fragment>
 
      )

@@ -1,15 +1,15 @@
 import React, { Fragment } from 'react'
 import Avatar from './Avatar'
-
+import useStyles from './multi.style'
 const Usuario = ({user}) => {
-
+    const classes = useStyles();
     return(
         <Fragment>
-            <div className="media">
-                <div className="nombredeUser hijo2">
-                    <h5 className=" usuario"> {user.nombre} </h5>
+            <div className={classes.media}>
+                <div className={classes.hijo2}>
+                    <h5 className={classes.usuario}> {user.nombre} </h5>
                 </div>
-                <div className='hijo2'>
+                <div className={classes.hijo2}>
                 <Avatar urlImagen={user.urlImagen} />
                 </div>
                 
