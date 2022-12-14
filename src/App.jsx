@@ -10,6 +10,8 @@ import UploadComponent from './components/UploadComponent';
 import LoaderComponent from './components/LoaderComponent';
 import LoaderSpinnerContextProvider from './context/LoaderSpinnerContextProvider';
 import Detail from './pages/detail';
+import SumaryReports from './components/SumaryReports/Index';
+
 function App() {
 
   const items = [
@@ -36,7 +38,7 @@ function App() {
             <Routes>
               <Route path="/" element={<>
                 <Dashboard> 
-                  <p>content </p> 
+                  <SumaryReports/>  
                 </Dashboard>
               </>}/>
               <Route path="/upload" element={<>
