@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import Avatar from './Avatar'
-import useStyles from './multi.style'
+import useStyles from '../../components/Header/multi.style'
 const Usuario = ({user}) => {
     const classes = useStyles();
     return(

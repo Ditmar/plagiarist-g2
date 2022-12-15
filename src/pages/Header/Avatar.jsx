@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import useStyles from './multi.style'
+import useStyles from '../../components/Header/multi.style'
 const Avatar = ({urlImagen}) => {
     const classes = useStyles();
     return(
