@@ -58,5 +58,11 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'right',
         letterSpacing: '0.2px',
     },
+    button:{
+        height: '26px',
+        width: '36px',
+        color: '#C5C7CD',
+        border: 'none',
+    }
 }));
 export default useStyles;
