@@ -1,10 +1,9 @@
 import React from 'react'
-//import './login.css';
 
 import { Button } from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
-import useStyles from './multi.style';
+import useStyles from './login.styles.js';
 const Login = () => {
     
     const classes =useStyles();
