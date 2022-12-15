@@ -8,6 +8,13 @@ const useStyles = makeStyles(theme => ({
                 marginLeft: '10px'
             }
         }
+    },
+    sidebarmenu: {
+        display: 'flex',
+        flexDirection: 'column',
+        margin: '0',
+        padding: '5px',
+        listStyle: 'none',
     }
 }));
 export default useStyles;

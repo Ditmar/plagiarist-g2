@@ -22,7 +22,16 @@ const theme = createTheme({
         }, 
         fourth: {
             main: '#EBC7E8'
-        }
+        },
+        backgroundBox: {
+            main: '#FFFFFF'
+        },
+        textBox:{
+            main:'#9FA2B4'
+        },
+        numberBox:{
+            main:'#252733'
+        },
     },
     overrides: {
         MuiCssBaseline: {
