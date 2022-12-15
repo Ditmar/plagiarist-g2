@@ -63,6 +63,25 @@ const useStyles = makeStyles(theme => ({
         width: '36px',
         color: '#C5C7CD',
         border: 'none',
+    },
+    icon:{
+        position: 'relative',
+    },
+    campana:{
+      width: '25px',
+      height: '25px',
+      color: '#C5C7CD',
+    },
+    counter:{
+        width: '1px',
+        height: '1px',
+        backgroundColor:' #3751FF',
+        borderRadius: '50%',
+        padding: '5px',
+        position: 'absolute',
+        top:' 52px',
+        marginLeft: '10px',
+        border: '1.5px solid #DFE0EB',
     }
 }));
 export default useStyles;

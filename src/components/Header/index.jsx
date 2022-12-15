@@ -2,7 +2,6 @@ import React from 'react'
 import { Typography } from '@mui/material';
 import Title from "../../pages/Header/Title";
 import Usuario from "../../pages/Header/Usuario";
-import "../../pages/Header/Review.css";
 import Busqueda from "../../pages/Header/Busqueda";
 import Bell from "../../pages/Header/Bell";
 import useStyles from './header.styles';
