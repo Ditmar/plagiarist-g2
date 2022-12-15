@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import useStyles from '../../components/Header/multi.style'
-const Busqueda = () => {
+const Search = () => {
     const classes = useStyles();
     return(
         <div className="Busqueda">
@@ -18,4 +18,4 @@ const Busqueda = () => {
     );
 }
 
-export default Busqueda;
+export default Search;

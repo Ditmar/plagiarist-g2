@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Avatar from './Avatar'
 import useStyles from '../../components/Header/multi.style'
-const Usuario = ({user}) => {
+const User = ({user}) => {
     const classes = useStyles();
     return(
         <Fragment>
@@ -18,4 +18,4 @@ const Usuario = ({user}) => {
     );
 }
 
-export default Usuario; 
+export default User; 
